@@ -32,5 +32,5 @@ geo_raster.plot_window(mn_graster,46.792381, -93.219508,radius=500)
 In this case, the white regions are 10m squares that are covered by a wetland region in the data.
 We can see the island rendered as the black spot in the center of the window.
 
-Other functions such as ```python geo_raster.sample_window``` return the region as a numpy array
+Other functions such as ```geo_raster.sample_window``` return the region as a numpy array
 for general purpose use.
