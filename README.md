@@ -21,7 +21,8 @@ here is a lake with an island:
 
 with the red marker having lat/lon coordinates of ```(46.792370, -93.219519)```.
 We can view the region about this coordinate from the raster as follows:
-```
+
+```python
 # Radius is in the units specified when the GeoRaster object was constructed,
 # in our case this is meters.
 geo_raster.plot_window(mn_graster,46.792381, -93.219508,radius=500)
@@ -31,5 +32,5 @@ geo_raster.plot_window(mn_graster,46.792381, -93.219508,radius=500)
 In this case, the white regions are 10m squares that are covered by a wetland region in the data.
 We can see the island rendered as the black spot in the center of the window.
 
-Other functions such as ```geo_raster.sample_window``` return the region as a numpy array
+Other functions such as ```python geo_raster.sample_window``` return the region as a numpy array
 for general purpose use.
