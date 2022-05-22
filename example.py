@@ -20,7 +20,7 @@ geo_raster.make_raster_from_geopackage(mn_graster, "water_nat_wetlands_inv_2009-
 #saving the raster can save time & space later (wraps numpy.save)
 geo_raster.save_raster(mn_graster, "mn_wetland_10m")
 # to load:
-# geo_raster.load_raster(mn_graster, "mn_wetland_10m.npy")
+# geo_raster.load_raster(mn_graster, "mn_wetland_10m")
 
 #annotate real estate listings with wetland coverage (values in 0-1)
 listing_file = "mn_listings.json"

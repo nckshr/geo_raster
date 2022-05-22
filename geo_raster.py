@@ -174,9 +174,11 @@ def coord_to_pixel(gr, lat,lon):
 
 def save_raster(gr,file_path):    
     np.save(file_path,gr.raster)
+    np.save(f"{file_path}_bounds",gr.geo_bounds)
     
 def load_raster(gr, file_path):
-    gr.raster = np.load(file_path)
+    gr.raster = np.load(f"{file_path}.npy")
+    gr.geo_bounds = np.load(f"{file_path}_bounds.npy")
 
 
 def plot_geometry(gr, window_size):
