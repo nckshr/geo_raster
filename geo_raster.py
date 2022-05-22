@@ -176,7 +176,7 @@ def save_raster(gr,file_path):
     np.save(file_path,gr.raster)
     
 def load_raster(gr, file_path):
-    gr.raster = np.load(file_path,dtype=bool)
+    gr.raster = np.load(file_path)
 
 
 def plot_geometry(gr, window_size):
