@@ -1,5 +1,5 @@
 # geo_raster
-This repository leverages the geopandas and rasterio python libraries to facilitate rendering binary rasters of geological shape data for quick sampling of area coverage based on lat/lon coordinates and a given radius.
+This repository leverages the geopandas, rasterio, and pyproj python libraries to facilitate rendering binary rasters of geological shape data for quick sampling of area coverage based on lat/lon coordinates and a given radius.
 
 Here's a small example using the [Minnesota National Wetland Inventory Data](https://gisdata.mn.gov/dataset/water-nat-wetlands-inv-2009-2014),
 you can download the geopackage [here](https://resources.gisdata.mn.gov/pub/gdrs/data/pub/us_mn_state_dnr/water_nat_wetlands_inv_2009_2014/gpkg_water_nat_wetlands_inv_2009_2014.zip).
@@ -27,6 +27,7 @@ We can view the region about this coordinate from the raster as follows:
 geo_raster.plot_window(mn_graster,46.792381, -93.219508,radius=500)
 ```
 <img src="https://i.imgur.com/fT5szGw.png" width=400></img>
+
 In this case, the white regions are 10m squares that are covered by a wetland region in the data.
 We can see the island rendered as the black spot in the center of the window.
 
