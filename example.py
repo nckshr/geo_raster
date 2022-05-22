@@ -25,7 +25,7 @@ geo_raster.save_raster(mn_graster, "mn_wetland_10m")
 #annotate real estate listings with wetland coverage (values in 0-1)
 listing_file = "mn_listings.json"
 with  open(listing_file) as listing_file_obj:
-listing_data = json.load(listing_file_obj)
+    listing_data = json.load(listing_file_obj)
 
 for lx in range(0,len(listing_data)):
     listing = listing_data[lx]
