@@ -14,7 +14,7 @@ class GeoRaster:
     def __init__(self, units_per_pixel,
                      proj, zone, north, datum, units):
         #Example: 
-        #Proj("+proj=utm +zone=15, +north +datum=NAD83 +units=m +no_defs")
+        #Proj("+proj=utm +zone=15 +north +datum=NAD83 +units=m +no_defs")
         self.geo_data = None
         self.geo_bounds = np.array([0,0,0,0])
         self.projection = proj
@@ -25,7 +25,7 @@ class GeoRaster:
             self.pole = "south"        
         self.datum = datum
         self.units = units
-        proj_str=f"+proj={self.projection} +zone={str(self.zone)}, +{self.pole} +datum={self.datum} +units={self.units} +no_defs"
+        proj_str=f"+proj={self.projection} +zone={str(self.zone)} +{self.pole} +datum={self.datum} +units={self.units} +no_defs"
         print(f"Building Projection with string '{proj_str}'")
         self.projector = Proj(proj_str)
         self.raster = np.array([0])
