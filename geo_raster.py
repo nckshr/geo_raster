@@ -109,8 +109,8 @@ def sample_window_coverage(gr,lat,lon,radius):
 
 
 def plot_window(gr, lat, lon, radius):
-    coverage_array = sample_window(gr, lat,lon,radius) * 255
-    im = Image.fromarray(coverage_array)
+    coverage_array = sample_window(gr, lat,lon,radius)
+    im = Image.fromarray(coverage_array*255)
     plt.imshow(im)
     print(np.mean(coverage_array))
     
@@ -127,7 +127,7 @@ def sample_window_coverage_prefix(gr,lat,lon,radius):
 
 
 def sample_acres(gr, lat, lon, acres):            
-    print(sample_sqft(gr,lat,lon,43560 * acres))
+    return sample_sqft(gr,lat,lon,43560 * acres)
 
 def sample_sqft(gr, lat, lon, sqft, variance_radius_ft=0):
     #box_size is the radius in <gr.units> of the box containing <sqft> square feet
